@@ -1,4 +1,4 @@
-package java.com.murilo.estoque;
+package com.murilo.estoque;
 
 public interface IImposto {
     public void calculaImposto();

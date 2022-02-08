@@ -1,4 +1,4 @@
-package java.com.murilo.estoque;
+package com.murilo.estoque;
 
 public class VideoGame extends Produto{
     private String marca;
@@ -41,7 +41,7 @@ public class VideoGame extends Produto{
 
     @Override
     public void calculaImposto() {
-        double imposto;
+        double imposto = 0d;
         if(this.isUsado){
             imposto = super.getPreco() * 0.25;
         }
@@ -49,7 +49,7 @@ public class VideoGame extends Produto{
             imposto = super.getPreco() * 0.45;
         }
 
-        System.out.print("Imposto de: " + getNome() + getModelo());
+        System.out.print("Imposto de: " + getNome() + " " + getModelo());
         if(isUsado) System.out.print(" usado ");
         System.out.print(" é: " + imposto + "\n");
     }

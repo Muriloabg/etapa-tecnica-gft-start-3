@@ -1,4 +1,4 @@
-package java.com.murilo.estoque;
+package com.murilo.estoque;
 
 public abstract class Produto implements IImposto{
     private String nome;

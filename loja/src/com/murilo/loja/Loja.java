@@ -1,7 +1,8 @@
-package java.com.murilo.loja;
+package com.murilo.loja;
 
-import java.com.murilo.estoque.Livro;
-import java.com.murilo.estoque.VideoGame;
+import com.murilo.estoque.Livro;
+import com.murilo.estoque.VideoGame;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -55,28 +56,38 @@ public class Loja {
 
     public void listaLivros(){
         if(livros.isEmpty()){
-            System.out.println("A loja não tem livros no seu estoque.");
+            System.out.println("A loja não tem livros em estoque.");
             return;
         }
-        System.out.println(Arrays.toString(livros.toArray()));
+
+        System.out.println("A Loja " + getNome() + " possui estes livros para venda: ");
+
+        for(Livro livro : livros){
+            System.out.println("Título: " + livro.getNome() + ", preço: " + livro.getPreco() + ", quantidade: " + livro.getQtd() + " em estoque");
+        }
     }
 
     public void listaVideoGames(){
-        if(livros.isEmpty()){
-            System.out.println("A loja não tem video-games no seu estoque.");
+        if(videoGames.isEmpty()){
+            System.out.println("A loja não tem livros em estoque.");
             return;
         }
-        System.out.println(Arrays.toString(videoGames.toArray()));
+
+        System.out.println("A Loja " + getNome() + " possui estes livros para venda: ");
+
+        for(VideoGame videoGame : videoGames){
+            System.out.println("Título: " + videoGame.getNome() + ", preço: " + videoGame.getPreco() + ", quantidade: " + videoGame.getQtd() + " em estoque");
+        }
     }
 
     public void calculaPatrimonio(){
         int sum = 0;
 
         for(Livro livro : livros){
-            sum += livro.getPreco();
+            sum += livro.getPreco() * livro.getQtd();
         }
         for(VideoGame videoGame : videoGames){
-            sum += videoGame.getPreco();
+            sum += videoGame.getPreco() * videoGame.getQtd();
         }
 
         System.out.println("O patrimonio da loja: " + getNome() + "é de: " + sum);

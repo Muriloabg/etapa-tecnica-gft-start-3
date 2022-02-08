@@ -1,4 +1,4 @@
-package java.com.murilo.estoque;
+package com.murilo.estoque;
 
 import java.util.Objects;
 

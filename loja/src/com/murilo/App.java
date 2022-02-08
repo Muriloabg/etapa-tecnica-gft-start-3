@@ -1,8 +1,8 @@
-package java.com.murilo;
+package com.murilo;
 
-import java.com.murilo.estoque.Livro;
-import java.com.murilo.estoque.VideoGame;
-import java.com.murilo.loja.Loja;
+import com.murilo.estoque.Livro;
+import com.murilo.estoque.VideoGame;
+import com.murilo.loja.Loja;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,8 +35,16 @@ public class App {
         ps4Usado.calculaImposto();
         ps4.calculaImposto();
 
+        System.out.println("------------------------------------------------------------");
+
         americanas.listaLivros();
+
+        System.out.println("------------------------------------------------------------");
+
         americanas.listaVideoGames();
+
+        System.out.println("------------------------------------------------------------");
+
         americanas.calculaPatrimonio();
     }
 }
